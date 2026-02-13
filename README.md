@@ -27,7 +27,7 @@ A homebrew metacurrency module for Warhammer Fantasy Roleplay 4th Edition on Fou
 ### Method 1: Manifest URL
 In Foundry VTT, go to **Add-on Modules → Install Module** and paste:
 ```
-https://github.com/your-username/wfrp4e-misfortune/releases/latest/download/module.json
+https://github.com/cogsagi/wfrp4e-misfortune/releases/latest/download/module.json
 ```
 
 ### Method 2: Manual
