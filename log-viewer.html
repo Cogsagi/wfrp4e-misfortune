@@ -1,0 +1,29 @@
+<div class="misfortune-log">
+  <div class="misfortune-log__header">
+    <p>History of Misfortune earned and spent during this campaign.</p>
+  </div>
+
+  <div class="misfortune-log__entries">
+    {{#if entries.length}}
+      {{#each entries}}
+        <div class="misfortune-log__entry misfortune-log__entry--{{this.type}}">
+          <div class="misfortune-log__entry-icon">
+            {{#if this.isEarned}}⛧{{else}}☠{{/if}}
+          </div>
+          <div class="misfortune-log__entry-body">
+            {{#if this.isEarned}}
+              <span class="misfortune-log__action">Earned</span>
+              — <strong>{{this.player}}</strong> rolled <strong>{{this.roll}}</strong>
+            {{else}}
+              <span class="misfortune-log__action">Spent</span>
+            {{/if}}
+            <span class="misfortune-log__pool">(Pool: {{this.pool}})</span>
+            <div class="misfortune-log__time">{{this.formattedTime}}</div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <p class="misfortune-log__empty">No Misfortune has been recorded... yet.</p>
+    {{/if}}
+  </div>
+</div>

@@ -1,0 +1,269 @@
+/* ============================================================================
+   WFRP4e Misfortune — Styles
+   Dark, grimdark aesthetic befitting the Old World
+   ============================================================================ */
+
+/* ============================================================================
+   TRACKER WIDGET — Floating UI element
+   ============================================================================ */
+
+.misfortune-tracker {
+  position: fixed;
+  bottom: 90px;
+  left: 15px;
+  z-index: 100;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 2px solid #4a3728;
+  border-radius: 6px;
+  padding: 8px 12px;
+  min-width: 120px;
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(139, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  color: #c9b18c;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.misfortune-tracker:hover {
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(139, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Header row */
+.misfortune-tracker__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(74, 55, 40, 0.5);
+  padding-bottom: 4px;
+}
+
+.misfortune-tracker__symbol {
+  font-size: 14px;
+  color: #8b0000;
+  text-shadow: 0 0 6px rgba(139, 0, 0, 0.6);
+}
+
+.misfortune-tracker__title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #8a7a65;
+}
+
+/* Pool counter */
+.misfortune-tracker__pool {
+  text-align: center;
+  padding: 6px 0;
+}
+
+.misfortune-tracker__count {
+  font-size: 36px;
+  font-weight: bold;
+  color: #c9b18c;
+  text-shadow:
+    0 0 8px rgba(139, 0, 0, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  min-width: 40px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Pulse animation when gaining misfortune */
+.misfortune-pulse-up {
+  animation: misfortune-gain 0.6s ease-out;
+}
+
+@keyframes misfortune-gain {
+  0% {
+    transform: scale(1);
+    color: #c9b18c;
+  }
+  30% {
+    transform: scale(1.4);
+    color: #ff2200;
+    text-shadow:
+      0 0 20px rgba(255, 0, 0, 0.8),
+      0 0 40px rgba(139, 0, 0, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    color: #c9b18c;
+  }
+}
+
+/* Pulse animation when spending misfortune */
+.misfortune-pulse-down {
+  animation: misfortune-spend 0.5s ease-out;
+}
+
+@keyframes misfortune-spend {
+  0% {
+    transform: scale(1);
+    color: #c9b18c;
+  }
+  30% {
+    transform: scale(0.8);
+    color: #4a8a4a;
+  }
+  100% {
+    transform: scale(1);
+    color: #c9b18c;
+  }
+}
+
+/* GM Controls */
+.misfortune-tracker__controls {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(74, 55, 40, 0.5);
+  padding-top: 6px;
+}
+
+.misfortune-tracker__btn {
+  flex: 1;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  color: #c9b18c;
+  background: linear-gradient(180deg, #2a2218 0%, #1a150e 100%);
+  border: 1px solid #4a3728;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.misfortune-tracker__btn:hover {
+  background: linear-gradient(180deg, #3a3020 0%, #2a2218 100%);
+  border-color: #6a5740;
+  color: #e0d0b0;
+}
+
+.misfortune-tracker__btn--spend {
+  color: #cc8888;
+}
+
+.misfortune-tracker__btn--spend:hover {
+  background: linear-gradient(180deg, #3a1515 0%, #2a0e0e 100%);
+  border-color: #8b0000;
+  color: #ff9999;
+  box-shadow: 0 0 8px rgba(139, 0, 0, 0.3);
+}
+
+.misfortune-tracker__btn--reset:hover {
+  background: linear-gradient(180deg, #2a2a15 0%, #1a1a0e 100%);
+  border-color: #6a6a40;
+}
+
+/* ============================================================================
+   CHAT MESSAGES — Dramatic notifications
+   ============================================================================ */
+
+.misfortune-chat {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+}
+
+.misfortune-chat__icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.misfortune-chat__body {
+  flex: 1;
+}
+
+.misfortune-chat__title {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.misfortune-chat__text {
+  margin: 0 0 6px 0;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.misfortune-chat__detail {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+}
+
+.misfortune-chat__pool {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Earned variant — dark red / ominous */
+.misfortune-chat--earned {
+  background: linear-gradient(135deg, #1a0808 0%, #2a1010 100%);
+  border-left: 3px solid #8b0000;
+  color: #d4a0a0;
+}
+
+.misfortune-chat--earned .misfortune-chat__icon {
+  color: #cc3333;
+  text-shadow: 0 0 8px rgba(200, 0, 0, 0.5);
+}
+
+.misfortune-chat--earned .misfortune-chat__title {
+  color: #e05555;
+}
+
+/* Spent variant — sickly green / Chaos */
+.misfortune-chat--spent {
+  background: linear-gradient(135deg, #0a1a0a 0%, #152015 100%);
+  border-left: 3px solid #2a6a2a;
+  color: #a0c4a0;
+}
+
+.misfortune-chat--spent .misfortune-chat__icon {
+  color: #66aa66;
+  text-shadow: 0 0 8px rgba(0, 150, 0, 0.4);
+}
+
+.misfortune-chat--spent .misfortune-chat__title {
+  color: #77cc77;
+}
+
+/* Status / help variant — neutral */
+.misfortune-chat--status,
+.misfortune-chat--help {
+  background: linear-gradient(135deg, #141414 0%, #1e1e1e 100%);
+  border-left: 3px solid #4a3728;
+  color: #c9b18c;
+}
+
+.misfortune-chat--help p {
+  margin: 2px 0;
+  font-size: 12px;
+  font-style: normal;
+}
+
+/* Reset variant */
+.misfortune-chat--reset {
+  background: linear-gradient(135deg, #14140a 0%, #1e1e10 100%);
+  border-left: 3px solid #8a8a40;
+  color: #c9c490;
+}
+
+.misfortune-chat--reset .misfortune-chat__icon {
+  color: #aaaa55;
+}
