@@ -6,7 +6,7 @@
   "authors": [
     {
       "name": "Ryan",
-      "url": "https://github.com/your-username"
+      "url": "https://github.com/Cogsagi"
     }
   ],
   "compatibility": {
@@ -28,8 +28,8 @@
   "esmodules": ["scripts/misfortune.mjs"],
   "styles": ["styles/misfortune.css"],
   "socket": true,
-  "url": "https://github.com/your-username/wfrp4e-misfortune",
-  "manifest": "https://github.com/your-username/wfrp4e-misfortune/releases/latest/download/module.json",
-  "download": "https://github.com/your-username/wfrp4e-misfortune/releases/latest/download/module.zip",
+  "url": "https://github.com/Cogsagi/fvtt_misfortune",
+  "manifest": "https://github.com/Cogsagi/fvtt_misfortune/blob/main/module.json",
+  "download": "https://github.com/Cogsagi/fvtt_misfortune/archive/refs/tags/fv55.zip",
   "license": "MIT"
 }
