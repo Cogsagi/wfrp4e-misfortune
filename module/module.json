@@ -28,8 +28,8 @@
   "esmodules": ["scripts/misfortune.mjs"],
   "styles": ["styles/misfortune.css"],
   "socket": true,
-  "url": "https://github.com/Cogsagi/fvtt_misfortune",
-  "manifest": "https://raw.githubusercontent.com/Cogsagi/fvtt_misfortune/refs/heads/main/misfortune.mjs",
-  "download": "https://github.com/Cogsagi/fvtt_misfortune/archive/refs/tags/fv55.zip",
+  "url": "https://github.com/Cogsagi/wfrp4e-misfortune",
+  "manifest": "https://raw.githubusercontent.com/Cogsagi/wfrp4e-misfortune/refs/heads/main/module/module.json",
+  "download": "https://github.com/Cogsagi/wfrp4e-misfortune/archive/refs/tags/wfrp4e-misfortune.zip",
   "license": "MIT"
 }
